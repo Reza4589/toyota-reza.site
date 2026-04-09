@@ -6,7 +6,21 @@
     font-family: 'Tahoma', sans-serif;
 }
 
+body 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* این خط جادو می‌کنه */
+}
+
 body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+{
     background-color: #f4f4f4;
     color: #333;
 }
@@ -276,4 +290,19 @@ html {
 
 .btn-details:hover {
     background-color: #eb0a1e;
+}
+
+/* برای تیترهای بزرگ و ضخیم */
+h2.section-title {
+    font-weight: 900; /* خیلی ضخیم */
+    letter-spacing: 2px; /* فاصله بین حروف برای کلاس بیشتر */
+}
+
+/* برای متن‌های داخل کارت */
+.car-info h3 {
+    font-weight: 700; /* ضخامت متوسط رو به بالا */
+}
+
+.car-info p {
+    font-weight: 300; /* نازک و شیک */
 }
