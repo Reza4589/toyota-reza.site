@@ -306,3 +306,45 @@ h2.section-title {
 .car-info p {
     font-weight: 300; /* نازک و شیک */
 }
+
+/* تنظیمات کل بخش گالری */
+.gallery-section {
+    padding: 60px 8%;
+    background-color: #fff; /* پس‌زمینه سفید برای تضاد با بخش‌های دیگر */
+}
+
+/* شبکه بندی گالری (Grid) */
+.gallery-container {
+    display: grid;
+    /* جادوی واکنش‌گرایی: ستون‌هایی با حداقل عرض ۲۵۰ پیکسل که خودکار تنظیم می‌شوند */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* فاصله بین عکس‌ها */
+}
+
+/* استایل نگهدارنده عکس */
+.gallery-item {
+    overflow: hidden; /* برای اینکه افکت بزرگ‌نمایی از کادر بیرون نزند */
+    border-radius: 10px; /* لبه‌های گرد */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* افکت هوور روی کل آیتم */
+.gallery-item:hover {
+    transform: translateY(-5px); /* پرش ملایم به بالا */
+}
+
+/* استایل خود عکس */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* مهم: عکس بدون دفرمه شدن کادر را پر می‌کند */
+    display: block;
+    transition: transform 0.5s ease; /* انیمیشن نرم برای بزرگ‌نمایی */
+}
+
+/* افکت بزرگ‌نمایی عکس هنگام هوور (Zoom In) */
+.gallery-item:hover img {
+    transform: scale(1.1); /* عکس ۱۰ درصد بزرگ‌تر می‌شود */
+}
