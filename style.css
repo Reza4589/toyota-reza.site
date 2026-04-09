@@ -1,21 +1,12 @@
-/* تنظیمات کلی */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Tahoma', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
-}
-
-body * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    /* این خط جادو می‌کنه */
 }
 
 body {
@@ -24,40 +15,27 @@ body {
     line-height: 1.6;
 }
 
-    {
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* استایل منو */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
+    padding: 10px 10%;
     background: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* تنظیمات ظرف لوگو */
 .logo img {
-    height: 150px;
-    /* این عدد را می‌توانید بر اساس اندازه لوگوی خودتان کم یا زیاد کنید */
+    height: 80px; /* اندازه را کمی منطقی‌تر کردم */
     width: auto;
-    /* اجازه می‌دهیم عرض عکس بر اساس ارتفاعش تنظیم شود تا دفرمه نشود */
     display: block;
     transition: transform 0.3s ease;
 }
 
-/* افکت بزرگ‌نمایی ملایم وقتی موس روی لوگو می‌رود */
 .logo img:hover {
-    transform: scale(1.1);
-}
-
-/* حذف استایل‌های متنی قبلی که دیگر لازم نیستند */
-.logo {
-    display: flex;
-    align-items: center;
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -72,6 +50,7 @@ body {
 .nav-links a {
     text-decoration: none;
     color: #333;
+    font-weight: 700;
     transition: 0.3s;
 }
 
@@ -79,7 +58,7 @@ body {
     color: #eb0a1e;
 }
 
-/* بخش هیرو (تصویر اصلی) */
+/* ۳. بخش هیرو (Hero Section) */
 .hero {
     height: 80vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -92,87 +71,30 @@ body {
 }
 
 .hero-h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    font-weight: 900;
     margin-bottom: 10px;
 }
 
+/* استایل دکمه اصلی */
 .btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 12px 30px;
+    padding: 12px 35px;
     background: #eb0a1e;
-    color: white;
+    color: white !important; /* برای اطمینان از سفید بودن متن */
     text-decoration: none;
     border-radius: 5px;
-    transition: 0.5s;
+    font-weight: bold;
+    transition: 0.4s;
 }
 
 .btn:hover {
-    background: #c00818;
+    background: #1a1a1a; /* در هوور سیاه شود که جذاب‌تر باشد */
+    transform: scale(1.05);
 }
 
-/* بخش ویژگی‌ها */
-.features {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 10%;
-    background: white;
-}
-
-.feature-card {
-    text-align: center;
-    padding: 20px;
-    width: 30%;
-}
-
-.feature-card h3 {
-    margin-bottom: 15px;
-    color: #eb0a1e;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #333;
-    color: white;
-}
-
-.gallery-container {
-    display: flex;
-    justify-content: center;
-    /* چیدن عکس‌ها در وسط */
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-.gallery-container img {
-    /* اندازه ثابت برای همه عکس‌ها */
-    width: 300px;
-    height: 200px;
-
-    /* این خط جادویی باعث میشه عکس کشیده یا دفرمه نشه */
-    object-fit: cover;
-
-    /* خوشگل‌سازی */
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    border: 3px solid white;
-}
-
-.gallery-container img:hover {
-    transform: translateY(-10px);
-    /* پرش به بالا */
-    box-shadow: 0 12px 20px rgba(235, 10, 30, 0.3);
-    /* سایه قرمز تویوتا */
-    border-color: #eb0a1e;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
+/* ۴. بخش درباره ما (About Us) */
 .about-section {
     padding: 80px 10%;
     background-color: #ffffff;
@@ -182,112 +104,49 @@ html {
     display: flex;
     align-items: center;
     gap: 50px;
-    /* فاصله بین متن و عکس */
-}
-
-.about-text {
-    flex: 1;
-    /* یعنی نصف فضا رو بگیره */
 }
 
 .about-text h2 {
     font-size: 2.5rem;
     color: #eb0a1e;
     margin-bottom: 20px;
-    text-align: center;
-}
-
-.about-text p {
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 15px;
-
-    text-align: justify;
-}
-
-.about-image {
-    flex: 1;
-    /* یعنی نصف دیگه فضا رو بگیره */
+    font-weight: 900;
 }
 
 .about-image img {
     width: 100%;
     border-radius: 20px;
-    box-shadow: 20px 20px 0px #eb0a1e;
-    /* یک افکت سایه قرمز فانتزی */
+    box-shadow: 15px 15px 0px #eb0a1e;
 }
 
-/* برای اینکه در موبایل متن و عکس زیر هم بیان */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-image img {
-        box-shadow: 10px 22px 0px #eb0a1e;
-    }
-}
-
-/* عنوان بخش */
+/* ۵. بخش مدل‌ها (Featured Models) */
 .section-title {
     text-align: center;
     font-size: 2.5rem;
-    margin: 50px 0;
-    color: #1a1a1a;
-    text-transform: uppercase;
+    margin: 60px 0 30px;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 
-/* شبکه بندی (Grid) */
 .models-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* جادوی واکنش‌گرایی */
     gap: 30px;
-    padding: 0 8%;
-    margin-bottom: 80px;
+    padding: 0 8% 80px;
 }
 
-/* استایل کارت‌ها */
 .car-card {
     background: #fff;
     border-radius: 15px;
     overflow: hidden;
-    /* برای اینکه عکس از لبه‌های گرد بیرون نزند */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 0.3s;
 }
 
 .car-card:hover {
     transform: translateY(-10px);
-    /* پرش کارت به بالا موقع هوور */
-    box-shadow: 0 15px 30px rgba(235, 10, 30, 0.2);
 }
 
-.car-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    /* جلوگیری از کشیده شدن عکس */
-}
-
-.car-info {
-    padding: 20px;
-    text-align: center;
-}
-
-.car-info h3 {
-    margin-bottom: 10px;
-    color: #1a1a1a;
-}
-
-.car-info p {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-/* دکمه داخل کارت */
 .btn-details {
     display: inline-block;
     padding: 10px 20px;
@@ -302,71 +161,66 @@ html {
     background-color: #eb0a1e;
 }
 
-/* برای تیترهای بزرگ و ضخیم */
-h2.section-title {
-    font-weight: 900;
-    /* خیلی ضخیم */
-    letter-spacing: 2px;
-    /* فاصله بین حروف برای کلاس بیشتر */
-}
-
-/* برای متن‌های داخل کارت */
-.car-info h3 {
-    font-weight: 700;
-    /* ضخامت متوسط رو به بالا */
-}
-
-.car-info p {
-    font-weight: 300;
-    /* نازک و شیک */
-}
-
-/* تنظیمات کل بخش گالری */
+/* ۶. گالری تصاویر (Gallery) */
 .gallery-section {
     padding: 60px 8%;
-    background-color: #fff;
-    /* پس‌زمینه سفید برای تضاد با بخش‌های دیگر */
+    background-color: #f9f9f9;
 }
 
-/* شبکه بندی گالری (Grid) */
 .gallery-container {
     display: grid;
-    /* جادوی واکنش‌گرایی: ستون‌هایی با حداقل عرض ۲۵۰ پیکسل که خودکار تنظیم می‌شوند */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    /* فاصله بین عکس‌ها */
+    gap: 15px;
 }
 
-/* استایل نگهدارنده عکس */
 .gallery-item {
     overflow: hidden;
-    /* برای اینکه افکت بزرگ‌نمایی از کادر بیرون نزند */
     border-radius: 10px;
-    /* لبه‌های گرد */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    height: 200px; /* تنظیم ارتفاع ثابت برای هماهنگی */
 }
 
-/* افکت هوور روی کل آیتم */
-.gallery-item:hover {
-    transform: translateY(-5px);
-    /* پرش ملایم به بالا */
-}
-
-/* استایل خود عکس */
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* مهم: عکس بدون دفرمه شدن کادر را پر می‌کند */
-    display: block;
-    transition: transform 0.5s ease;
-    /* انیمیشن نرم برای بزرگ‌نمایی */
+    transition: 0.5s;
 }
 
-/* افکت بزرگ‌نمایی عکس هنگام هوور (Zoom In) */
 .gallery-item:hover img {
     transform: scale(1.1);
-    /* عکس ۱۰ درصد بزرگ‌تر می‌شود */
+}
+
+/* ۷. فوتر (Footer) */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #1a1a1a;
+    color: white;
+}
+
+/* ۸. واکنش‌گرایی موبایل */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-h1 {
+        font-size: 2rem;
+    }
+}
+
+.top-cars {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 10%;
+    flex-wrap: wrap; /* برای اینکه در موبایل زیر هم بروند */
+}
+
+.top-cars img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
