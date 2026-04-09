@@ -6,12 +6,16 @@
     font-family: 'Tahoma', sans-serif;
 }
 
-body 
-* {
+html {
+    scroll-behavior: smooth;
+}
+
+body * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif; /* این خط جادو می‌کنه */
+    font-family: 'Montserrat', sans-serif;
+    /* این خط جادو می‌کنه */
 }
 
 body {
@@ -20,7 +24,7 @@ body {
     line-height: 1.6;
 }
 
-{
+    {
     background-color: #f4f4f4;
     color: #333;
 }
@@ -37,8 +41,10 @@ body {
 
 /* تنظیمات ظرف لوگو */
 .logo img {
-    height: 150px; /* این عدد را می‌توانید بر اساس اندازه لوگوی خودتان کم یا زیاد کنید */
-    width: auto;  /* اجازه می‌دهیم عرض عکس بر اساس ارتفاعش تنظیم شود تا دفرمه نشود */
+    height: 150px;
+    /* این عدد را می‌توانید بر اساس اندازه لوگوی خودتان کم یا زیاد کنید */
+    width: auto;
+    /* اجازه می‌دهیم عرض عکس بر اساس ارتفاعش تنظیم شود تا دفرمه نشود */
     display: block;
     transition: transform 0.3s ease;
 }
@@ -235,7 +241,8 @@ html {
 /* شبکه بندی (Grid) */
 .models-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* جادوی واکنش‌گرایی */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* جادوی واکنش‌گرایی */
     gap: 30px;
     padding: 0 8%;
     margin-bottom: 80px;
@@ -245,20 +252,23 @@ html {
 .car-card {
     background: #fff;
     border-radius: 15px;
-    overflow: hidden; /* برای اینکه عکس از لبه‌های گرد بیرون نزند */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    /* برای اینکه عکس از لبه‌های گرد بیرون نزند */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .car-card:hover {
-    transform: translateY(-10px); /* پرش کارت به بالا موقع هوور */
+    transform: translateY(-10px);
+    /* پرش کارت به بالا موقع هوور */
     box-shadow: 0 15px 30px rgba(235, 10, 30, 0.2);
 }
 
 .car-card img {
     width: 100%;
     height: 200px;
-    object-fit: cover; /* جلوگیری از کشیده شدن عکس */
+    object-fit: cover;
+    /* جلوگیری از کشیده شدن عکس */
 }
 
 .car-info {
@@ -294,23 +304,28 @@ html {
 
 /* برای تیترهای بزرگ و ضخیم */
 h2.section-title {
-    font-weight: 900; /* خیلی ضخیم */
-    letter-spacing: 2px; /* فاصله بین حروف برای کلاس بیشتر */
+    font-weight: 900;
+    /* خیلی ضخیم */
+    letter-spacing: 2px;
+    /* فاصله بین حروف برای کلاس بیشتر */
 }
 
 /* برای متن‌های داخل کارت */
 .car-info h3 {
-    font-weight: 700; /* ضخامت متوسط رو به بالا */
+    font-weight: 700;
+    /* ضخامت متوسط رو به بالا */
 }
 
 .car-info p {
-    font-weight: 300; /* نازک و شیک */
+    font-weight: 300;
+    /* نازک و شیک */
 }
 
 /* تنظیمات کل بخش گالری */
 .gallery-section {
     padding: 60px 8%;
-    background-color: #fff; /* پس‌زمینه سفید برای تضاد با بخش‌های دیگر */
+    background-color: #fff;
+    /* پس‌زمینه سفید برای تضاد با بخش‌های دیگر */
 }
 
 /* شبکه بندی گالری (Grid) */
@@ -318,33 +333,40 @@ h2.section-title {
     display: grid;
     /* جادوی واکنش‌گرایی: ستون‌هایی با حداقل عرض ۲۵۰ پیکسل که خودکار تنظیم می‌شوند */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px; /* فاصله بین عکس‌ها */
+    gap: 20px;
+    /* فاصله بین عکس‌ها */
 }
 
 /* استایل نگهدارنده عکس */
 .gallery-item {
-    overflow: hidden; /* برای اینکه افکت بزرگ‌نمایی از کادر بیرون نزند */
-    border-radius: 10px; /* لبه‌های گرد */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    /* برای اینکه افکت بزرگ‌نمایی از کادر بیرون نزند */
+    border-radius: 10px;
+    /* لبه‌های گرد */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
 /* افکت هوور روی کل آیتم */
 .gallery-item:hover {
-    transform: translateY(-5px); /* پرش ملایم به بالا */
+    transform: translateY(-5px);
+    /* پرش ملایم به بالا */
 }
 
 /* استایل خود عکس */
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* مهم: عکس بدون دفرمه شدن کادر را پر می‌کند */
+    object-fit: cover;
+    /* مهم: عکس بدون دفرمه شدن کادر را پر می‌کند */
     display: block;
-    transition: transform 0.5s ease; /* انیمیشن نرم برای بزرگ‌نمایی */
+    transition: transform 0.5s ease;
+    /* انیمیشن نرم برای بزرگ‌نمایی */
 }
 
 /* افکت بزرگ‌نمایی عکس هنگام هوور (Zoom In) */
 .gallery-item:hover img {
-    transform: scale(1.1); /* عکس ۱۰ درصد بزرگ‌تر می‌شود */
+    transform: scale(1.1);
+    /* عکس ۱۰ درصد بزرگ‌تر می‌شود */
 }
