@@ -21,11 +21,23 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* تنظیمات ظرف لوگو */
+.logo img {
+    height: 150px; /* این عدد را می‌توانید بر اساس اندازه لوگوی خودتان کم یا زیاد کنید */
+    width: auto;  /* اجازه می‌دهیم عرض عکس بر اساس ارتفاعش تنظیم شود تا دفرمه نشود */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* افکت بزرگ‌نمایی ملایم وقتی موس روی لوگو می‌رود */
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/* حذف استایل‌های متنی قبلی که دیگر لازم نیستند */
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #eb0a1e;
-    /* قرمز مخصوص تویوتا */
+    display: flex;
+    align-items: center;
 }
 
 .nav-links {
