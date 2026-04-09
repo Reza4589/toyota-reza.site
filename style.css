@@ -228,3 +228,52 @@ footer {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+
+.contact-section {
+    padding: 80px 10%;
+    background-color: #1a1a1a; /* پس‌زمینه تیره برای تضاد */
+    color: white;
+    text-align: center;
+}
+
+.contact-section .section-title {
+    color: white; /* چون پس‌زمینه تیره است، تیتر باید سفید باشه */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.info-item {
+    background: #2a2a2a;
+    padding: 30px;
+    border-radius: 15px;
+    min-width: 250px;
+    border-bottom: 5px solid #eb0a1e; /* خط قرمز معروف تویوتا زیر هر باکس */
+    transition: 0.3s;
+}
+
+.info-item:hover {
+    transform: translateY(-10px);
+    background: #333;
+}
+
+.info-item h3 {
+    color: #eb0a1e;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.info-item p {
+    font-size: 1.1rem;
+    color: #ccc;
+}
