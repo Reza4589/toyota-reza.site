@@ -1,1 +1,14 @@
-Toyota site just for homework
+
+# 🏎️ Toyota Fan Website
+
+این یک پروژه شخصی برای یادگیری طراحی وب (HTML/CSS) و مدیریت پروژه با گیت‌هاب است.
+
+## 🌟 ویژگی‌ها
+- منوی چسبان (Sticky Navbar) با رنگ‌های برند تویوتا
+- بخش About Us با چیدمان فلکس‌باکس
+- لوگوی اختصاصی و طراحی واکنش‌گرا (Responsive)
+
+## 🛠️ تکنولوژی‌های استفاده شده
+- HTML5
+- CSS3 (Flexbox & Grid)
+- Git & GitHub
