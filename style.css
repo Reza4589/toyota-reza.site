@@ -376,3 +376,17 @@ footer {
     display: block;
     margin-bottom: 30px;
 }
+
+/* این کد مستقیماً تمام تیترهای سطح 2 سایت را وسط‌چین می‌کند */
+h2 {
+    text-align: center !important;
+    width: 100%;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* اگر متن هنوز چپ است، احتمالا داخل یک بخش با آیدی models است */
+#models h2 {
+    text-align: center !important;
+}
