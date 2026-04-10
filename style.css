@@ -117,19 +117,67 @@ body {
     font-weight: 900;
 }
 
-.about-image img {
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 15px 15px 0px #eb0a1e;
+.about-text p {
+    line-height: 1.8; /* فاصله بین خطوط برای خوانایی بیشتر */
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #444;
+    text-align: justify; /* مرتب شدن لبه‌های متن */
 }
 
-/* ۵. بخش مدل‌ها (Featured Models) */
-.section-title {
+.about-text strong {
+    color: #eb0a1e; /* کلمات کلیدی مثل Toyota را قرمز می‌کند */
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 0px #eb0a1e;
+    object-fit: cover;
+}
+
+/* کل کانتینر ویژگی‌ها */
+.features {
+    display: flex;
+    flex-wrap: wrap;       /* اگر جا نبود، باکس‌ها بروند ردیف بعد */
+    justify-content: center; /* باکس‌ها را در مرکز قرار بده */
+    gap: 30px;             /* فاصله بین باکس‌ها */
+    padding: 60px 10%;
+    background-color: #f9f9f9;
+}
+
+/* هر کدام از کارت‌های ویژگی */
+.feature-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
     text-align: center;
-    font-size: 2.5rem;
-    margin: 60px 0 30px;
-    font-weight: 900;
-    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    
+    /* تنظیمات ابعاد برای جلوگیری از بهم‌ریختگی */
+    flex: 1;               /* اجازه بده باکس‌ها فضا را پر کنند */
+    min-width: 250px;      /* اجازه نده از ۲۵۰ پیکسل کوچکتر شوند */
+    max-width: 350px;      /* اجازه نده بیش از حد پهن شوند */
+    
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.feature-card h3 {
+    color: #eb0a1e;        /* رنگ قرمز تویوتا */
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
 }
 
 .models-grid {
@@ -139,22 +187,37 @@ body {
     padding: 0 8% 80px;
 }
 
+/* این بخش را جایگزین کدهای قبلی کاردها کن */
 .car-card {
     background: #fff;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
+    /* این سه خط جدید برای نظم دادن به دکمه‌ها اضافه شده */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .car-card:hover {
     transform: translateY(-10px);
 }
 
+.car-info {
+    padding: 20px;
+    /* این بخش کمک می‌کند دکمه همیشه تهِ کارت بماند */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+}
+
 .btn-details {
     display: inline-block;
+    margin-top: auto; /* این خط دکمه را به پایین هل می‌دهد */
     padding: 10px 20px;
-    background-color: #1a1a1a;
+    background-color: #eb0a1e;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -202,16 +265,35 @@ footer {
     color: white;
 }
 
-/* ۸. واکنش‌گرایی موبایل */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
+.about-container {
+    display: flex;
+    align-items: center; /* برای اینکه متن و عکس در یک راستا باشند */
+    gap: 20px;           /* فاصله بین متن و عکس */
+    flex-wrap: wrap;     /* این خط خیلی مهم است: اجازه می‌دهد اگر جا نبود، عکس برود زیر متن */
+}
+
+.about-text {
+    flex: 1;             /* متن منعطف باشد */
+    min-width: 300px;    /* حداقل عرض برای متن */
+}
+
+.about-image {
+    flex: 1.5;           /* عدد بزرگتر یعنی سهم بیشتری از فضا به عکس برسد */
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;         /* حالا این ۱۰۰ درصدِ فضای جدیدش را پر می‌کند */
+    max-width: 800px;    /* این عدد را روی مثلاً ۸۰۰ بگذار (۱۰۰۰۰ خیلی زیاد است!) */
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
     .hero-h1 {
         font-size: 2rem;
     }
-}
+
 
 .top-cars {
     display: flex;
@@ -276,4 +358,21 @@ footer {
 .info-item p {
     font-size: 1.1rem;
     color: #ccc;
+}
+
+/* وسط‌چین کردن تیترهای بخش مدل‌ها */
+#models h2, 
+.models-section h2,
+.models-section p {
+    text-align: center;
+    width: 100%;       /* اطمینان از اینکه متن کل عرض را در اختیار دارد */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* اگر متن Explore our models در یک پاراگراف جداست */
+.section-subtitle {
+    text-align: center;
+    display: block;
+    margin-bottom: 30px;
 }
