@@ -390,3 +390,28 @@ h2 {
 #models h2 {
     text-align: center !important;
 }
+
+/* تنظیمات مخصوص گوشی (صفحه‌های کوچکتر از 768 پیکسل) */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* متن و عکس به جای کنار هم، زیر هم قرار بگیرند */
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 100%; /* عکس از کادر بیرون نزند */
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: none; /* برای شروع ساده، منو را در گوشی مخفی می‌کنیم یا می‌توانی استایلش را عوض کنی */
+    }
+
+    h1 {
+        font-size: 2rem; /* کوچک کردن سایز تیتر اصلی برای گوشی */
+    }
+}
