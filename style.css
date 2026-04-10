@@ -391,27 +391,24 @@ h2 {
     text-align: center !important;
 }
 
-/* تنظیمات مخصوص گوشی (صفحه‌های کوچکتر از 768 پیکسل) */
 @media (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* متن و عکس به جای کنار هم، زیر هم قرار بگیرند */
-        text-align: center;
-    }
-
-    .about-image img {
-        max-width: 100%; /* عکس از کادر بیرون نزند */
-    }
-
-    .features {
-        flex-direction: column;
-        align-items: center;
-    }
-
+    /* به جای مخفی کردن، منو را مرتب می‌کنیم */
     .nav-links {
-        display: none; /* برای شروع ساده، منو را در گوشی مخفی می‌کنیم یا می‌توانی استایلش را عوض کنی */
+        display: flex;         /* دوباره نمایش داده شود */
+        flex-direction: row;   /* در یک خط باشند */
+        justify-content: center;
+        gap: 15px;             /* فاصله کم بین آیتم‌ها برای جا شدن */
+        padding: 10px 0;
+        font-size: 0.9rem;     /* فونت کمی کوچکتر برای گوشی */
     }
 
-    h1 {
-        font-size: 2rem; /* کوچک کردن سایز تیتر اصلی برای گوشی */
+    .navbar {
+        flex-direction: column; /* لوگو بالا و منو زیر آن قرار بگیرد */
+        height: auto;          /* ارتفاع ثابت را برمی‌داریم */
+        padding: 10px;
+    }
+    
+    .logo {
+        margin-bottom: 10px;
     }
 }
